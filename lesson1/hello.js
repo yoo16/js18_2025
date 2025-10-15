@@ -5,4 +5,4 @@
 // 4) = を入力
 // 5) 文字を入力
 
-document.title = "Hello JavaScript"
+document.title = "Hello JavaScript!"
