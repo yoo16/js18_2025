@@ -6,3 +6,8 @@
 // 5) 文字を入力
 
 document.title = "Hello JavaScript!"
+
+// コンソールに出力
+// clg : ES6 Code Snippetsのプラグインをいれると動作します
+
+console.log("コンソールに表示できるかな？")
