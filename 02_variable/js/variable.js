@@ -1,12 +1,17 @@
 // TODO: 変数定義 商品名「itemName」にコーヒーを代入
 var itemName = "コーヒー"
 // let itemName = "コーヒー"
+// 商品コードは文字なので、"" や '' で囲む
+var itemCode = "2004001"
 
-// TODO: 変数定義 価格「price」
+// TODO: 変数定義 価格「price」に数値(Number)の500を代入
+var price = 500
 
 // TODO: 変数定義 個数「quantity」
+var quantity = 3
 
 // TODO: 変数定義 割引「discount」
+var discount = 100
 
 // TODO: itemName に再代入
 
