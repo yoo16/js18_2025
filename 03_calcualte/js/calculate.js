@@ -36,6 +36,7 @@ subTotalPrice = price * quantity
 discount = isMember ? 100 : 0
 
 // TODO: 合計金額 = 小計金額 - 割引: totalPrice
+totalPrice = subTotalPrice - discount
 
 // TODO: 税抜き金額 = 合計金額 / (1 + 税率): taxWithoutPrice
 
