@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レセプト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Café Bonjour</h1>
+
+        <div class="mb-4 text-right">
+            <label for="order-code" class="text-sm font-bold text-gray-700">order code:</label>
+            <span id="order-code" class="mt-1 text-sm text-gray-900"></span>
+        </div>
+
+        <div class="mb-4">
+            <label for="item-name" class="block text-sm font-bold text-gray-700">商品名</label>
+            <div id="item-name" class="mt-1 text-lg text-gray-900 border-b border-gray-300 pb-1"></div>
+        </div>
+
+        <div class="mb-4">
+            <label for="price" class="block text-sm font-bold text-gray-700">価格</label>
+            <div id="price" class="mt-1 text-lg text-gray-900 border-b border-gray-300 pb-1"></div>
+        </div>
+
+        <div class="mb-4">
+            <label for="quantity" class="block text-sm font-bold text-gray-700">個数</label>
+            <div id="quantity" class="mt-1 text-lg text-gray-900 border-b border-gray-300 pb-1"></div>
+        </div>
+
+        <div class="mb-4">
+            <label for="sub-total-price" class="block text-sm font-bold text-gray-700">小計金額</label>
+            <div id="sub-total-price" class="mt-1 text-lg text-gray-900 border-b border-gray-300 pb-1">
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="discount" class="block text-sm font-bold text-gray-700">割引</label>
+            <div id="discount" class="mt-1 text-sky-600 border-b border-gray-300 pb-1"></div>
+        </div>
+
+        <div class="mb-4">
+            <label for="total-price" class="block text-sm font-bold text-gray-700">合計金額</label>
+            <div>
+                <span id="total-price" class="mt-1 text-lg text-gray-900 pb-1"></span>
+            </div>
+            <div>
+                <label id="" class="mt-1 font-bold text-xs text-gray-900 pb-1">税抜</label>
+                <span id="tax-without-price" class="mt-1 text-xs text-gray-900 pb-1"></span>
+                <label id="" class="mt-1 font-bold text-xs text-gray-900 pb-1">税額</label>
+                <span id="tax" class="mt-1 text-xs text-gray-900 pb-1"></span>
+            </div>
+        </div>
+
+        <div class="my-2">
+            <p class="text-xs">
+                お買い上げありがとうございました。
+                またのご来店をお待ちしております。
+            </p>
+        </div>
+    </div>
+    <script src="js/calculate.js"></script>
+</body>
+
+</html>
