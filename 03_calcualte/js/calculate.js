@@ -21,9 +21,13 @@ quantity++
 
 // 個数を1減らす
 quantity--
+// quantity = 2
+
+// 個数を3個増やす
+quantity += 3
 
 // TODO: 小計金額計算: subTotalPrice = price * quantity
-// 小計金額計算: 価格 x 数量
+// 小計金額計算: 価格 x 個数
 subTotalPrice = price * quantity
 
 // TODO: 三項演算子を使って割引額を設定: discount
