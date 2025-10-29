@@ -65,5 +65,9 @@ var orderNo = 20341;
 // TODO: オーダーコード生成（数値連結）※ 注意)文字列連結ではない
 var orderCode = tableNo + "-" + orderNo
 
+// テンプレートリテラルを使う場合
+// バッククォーテーション（``）で囲む
+orderCode = `${tableNo}-${orderNo}`
+
 // TODO: オーダーコード生成（テキスト連結） xx-xxxx 形式
 document.getElementById('order-code').innerHTML = orderCode;
