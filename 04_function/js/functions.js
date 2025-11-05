@@ -20,11 +20,11 @@ document.getElementById("isNaN_3").textContent = isNaN(5)
 // Math
 let height = 169.5;
 // TODO: 四捨五入: round()
-document.getElementById("math_round").textContent
+document.getElementById("math_round").textContent = Math.round(height)
 // TODO: 切り上げ: ceil()
-document.getElementById("math_ceil").textContent
+document.getElementById("math_ceil").textContent = Math.ceil(height)
 // TODO: 切り捨て: floor()
-document.getElementById("math_floor").textContent
+document.getElementById("math_floor").textContent = Math.floor(height)
 // TODO: 最大値: max()
 document.getElementById("math_max").textContent
 // TODO: 最小値: min()
