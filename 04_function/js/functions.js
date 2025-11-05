@@ -84,7 +84,7 @@ const hello2 = (name) => {
 // }
 
 // TODO: hello2 を使って表示
-document.getElementById("hello2").textContent;
+document.getElementById("hello2").textContent = hello2("東京 太郎")
 
 // ==============================
 // onload
