@@ -35,14 +35,21 @@ let current = 0
 document.getElementById("count").textContent = current
 
 // ==============================
-// ユーザ定義関数
+// ユーザ定義関数(user defined function)
 // ==============================
 // TODO: calculate() を定義: 引数 x の2乗を返す
+// fun と入力して、function statement で補完
+function calculate(x) {
+    // x の2乗 : power
+    let result = x ** 2
+    // 結果を返す
+    return result
+}
 
 // TODO: calculate() に 8 を渡して結果を表示
-document.getElementById("calc1").textContent
+document.getElementById("calc1").textContent = calculate(8)
 // TODO: calculate() に 71 を渡して結果を表示
-document.getElementById("calc2").textContent
+document.getElementById("calc2").textContent = calculate(71)
 
 // ==============================
 // 無名関数
