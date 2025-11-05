@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 p-6 text-gray-800 font-sans">
+    <h2 class="text-2xl font-bold my-2 text-center">ビルトイン関数</h2>
+    <table class="table-auto border-collapse border border-gray-400 mx-auto">
+        <thead class="bg-sky-600 text-white">
+            <tr>
+                <th class="border border-white-400 px-4 py-2">関数</th>
+                <th class="border border-white-400 px-4 py-2">入力</th>
+                <th class="border border-white-400 px-4 py-2">結果</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border px-4 py-2">parseInt()</td>
+                <td id="parseInt_input" class="border px-4 py-2"></td>
+                <td id="parseInt_output" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">isNaN()</td>
+                <td class="border px-4 py-2">コーヒー</td>
+                <td id="isNaN_1" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">isNaN()</td>
+                <td class="border px-4 py-2">0005</td>
+                <td id="isNaN_2" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">isNaN()</td>
+                <td class="border px-4 py-2">5</td>
+                <td id="isNaN_3" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">Math.round()</td>
+                <td class="border px-4 py-2">169.5</td>
+                <td id="math_round" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">Math.ceil()</td>
+                <td class="border px-4 py-2">169.5</td>
+                <td id="math_ceil" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">Math.floor()</td>
+                <td class="border px-4 py-2">169.5</td>
+                <td id="math_floor" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">Math.max(1,5,10,3)</td>
+                <td class="border px-4 py-2">1,5,10,3</td>
+                <td id="math_max" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">Math.min(1,5,10,3)</td>
+                <td class="border px-4 py-2">1,5,10,3</td>
+                <td id="math_min" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">setInterval()</td>
+                <td class="border px-4 py-2">1000ms（1秒）</td>
+                <td id="count" class="border px-4 py-2"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 class="text-2xl font-bold my-2 text-center">ユーザ定義関数</h2>
+    <table class="table-auto border-collapse border border-gray-400 mx-auto">
+        <thead class="bg-sky-600 text-white">
+            <tr>
+                <th class="border border-white-400 px-4 py-2">関数</th>
+                <th class="border border-white-400 px-4 py-2">入力</th>
+                <th class="border border-white-400 px-4 py-2">結果</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="border px-4 py-2">calculate()</td>
+                <td class="border px-4 py-2">8</td>
+                <td id="calc1" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">calculate()</td>
+                <td class="border px-4 py-2">71</td>
+                <td id="calc2" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">hello1()</td>
+                <td class="border px-4 py-2">東京 太郎</td>
+                <td id="hello1" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">hello2()</td>
+                <td class="border px-4 py-2">東京 太郎</td>
+                <td id="hello2" class="border px-4 py-2"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">showTokyo()</td>
+                <td class="border px-4 py-2">window.onload で実行</td>
+                <td rowspan="2" id="message" class="border px-4 py-2 text-center"></td>
+            </tr>
+            <tr>
+                <td class="border px-4 py-2">showYokhama()</td>
+                <td class="border px-4 py-2">通常で実行</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="js/functions.js"></script>
+</body>
+
+</html>
