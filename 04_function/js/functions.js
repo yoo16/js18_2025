@@ -52,25 +52,36 @@ document.getElementById("calc1").textContent = calculate(8)
 document.getElementById("calc2").textContent = calculate(71)
 
 // ==============================
-// 無名関数
+// 無名関数(anonymous function)
 // ==============================
 // TODO: 無名関数 hello1 を定義
-// var hello1 = function (name) {
-//     var message = name + "さん、いらっしゃい";
-//     return message;
-// };
+var hello1 = function (name) {
+    var message = name + "さん、いらっしゃい";
+    return message;
+};
 
 // TODO: hello1 を使って表示
-document.getElementById("hello1").textContent;
+document.getElementById("hello1").textContent = hello1("東京 太郎")
 
 // ==============================
-// アロー関数
+// アロー関数(arrow function)
 // ==============================
 // TODO: アロー関数 hello2 を定義
 // var hello2 = (name) => {
 //     var message = name + "さん、いらっしゃい";
 //     return message;
 // };
+// nfn で補完してアロー関数を作成
+const hello2 = (name) => {
+    var message = name + "さん、いらっしゃい";
+    return message;
+}
+
+// 普通の function の場合
+// function hello2(name) {
+//     var message = name + "さん、いらっしゃい";
+//     return message;
+// }
 
 // TODO: hello2 を使って表示
 document.getElementById("hello2").textContent;
