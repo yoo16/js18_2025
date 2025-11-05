@@ -91,11 +91,11 @@ document.getElementById("hello2").textContent = hello2("東京 太郎")
 // ==============================
 // TODO: onload イベント: 「東京」「横浜」どちらが先に表示されるか確認
 
-// window.onload = function () {
-//     showTokyo();
-// };
+window.onload = function () {
+    showTokyo();
+};
 
-// showYokohama();
+showYokohama();
 
 function showTokyo() {
     document.getElementById("message").textContent += "東京";
