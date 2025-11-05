@@ -26,9 +26,9 @@ document.getElementById("math_ceil").textContent = Math.ceil(height)
 // TODO: 切り捨て: floor()
 document.getElementById("math_floor").textContent = Math.floor(height)
 // TODO: 最大値: max()
-document.getElementById("math_max").textContent
+document.getElementById("math_max").textContent = Math.max(1, 5, 10, 3)
 // TODO: 最小値: min()
-document.getElementById("math_min").textContent
+document.getElementById("math_min").textContent = Math.min(1, 5, 10, 3)
 
 let current = 0
 // TODO: 1秒毎にカウント: setInterval()
