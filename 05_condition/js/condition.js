@@ -58,7 +58,9 @@ if (price < 0) {
 }
 
 // Python の場合
-// if condition:
+// if condition1:
+//     # code
+// elif condition2:
 //     # code
 // else:
 //     # code
