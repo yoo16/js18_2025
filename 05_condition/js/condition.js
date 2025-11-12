@@ -34,9 +34,11 @@ result = (price < 0)
 addRow("price < 0", result)
 
 // TODO: price が 500 より大きい
+result = (price > 500)
 addRow("price > 500", result)
 
 // TODO: price が 500 以上
+result = (price >= 500)
 addRow("price >= 500", result)
 
 // TODO: If statement: money が price 以上 の時に "決済完了"
