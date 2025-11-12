@@ -47,7 +47,7 @@ let message2 = ""
 // 2. money が price 以上 の時に "決済完了"
 // 3. それ以外 の時に "残高不足"
 // ife を入力して、if-else statement を選択
-price = 1500
+price = 500
 money = 1000
 if (price < 0) {
     message2 = "価格エラー"
@@ -75,5 +75,17 @@ let trash = ""
 // 1. 月曜日、金曜日 の時に 燃えるゴミ
 // 2. 木曜日 の時に 燃えないゴミ
 // 3. それ以外 の時に 回収なし
+
+weekday = "月"
+// sw と入力して、 Switch Statement を選択
+switch (weekday) {
+    case "月":
+        trash = "もえるゴミ"
+        break;
+
+    default:
+        trash = "なし"
+        break;
+}
 
 addRow(`曜日(${weekday})`, trash)
