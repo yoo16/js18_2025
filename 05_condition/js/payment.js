@@ -74,7 +74,11 @@ function selectMethod(methodKey) {
             // id = "cashArea" を表示: class="hidden" を削除
             cashArea.classList.remove("hidden");
             break;
-    
+
+        case "qr":
+            // id = "qrArea" を表示: class="hidden" を削除
+            qrArea.classList.remove("hidden");
+            break;
         default:
             break;
     }
