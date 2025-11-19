@@ -125,6 +125,8 @@ function handlePayment() {
         // 処理中断
         return;
     }
+    // TODO :Cash 以外の決済方法の残高チェック
+    // 決済代行会社で処理
 
     showStatus("決済処理中です...");
     // TODO ビープ音再生
