@@ -12,8 +12,8 @@ const audioFanfare = document.getElementById("fanfare");
 // オーディオ再生フラグ（未使用）
 const isAudioPlay = true;
 // オーディオ音量設定
-audioBeep.volume = 0.1;
-audioFanfare.volume = 0.1;
+audioBeep.volume = 0.5;
+audioFanfare.volume = 0.5;
 
 // ===========================
 // 固定請求額
@@ -131,6 +131,9 @@ function handlePayment() {
     showStatus("決済処理中です...");
     // TODO ビープ音再生
     // isAudioPlay=true の時: audioBeep.play()
+    if (isAudioPlay) {
+        audioBeep.play();
+    }
 
     // 疑似処理待機
     setTimeout(() => completePayment(), 1800);
@@ -150,7 +153,9 @@ function completePayment() {
 
     // TODO :決済完了ファンファーレ再生
     // isAudioPlay=true の時: audioFanfare.play()
-
+    if (isAudioPlay) {
+        audioFanfare.play();
+    }
     // 決済完了メッセージ表示
     showStatus("決済が完了しました。ありがとうございました！");
 }
