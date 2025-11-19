@@ -76,10 +76,11 @@ let trash = ""
 // 2. 木曜日 の時に 燃えないゴミ
 // 3. それ以外 の時に 回収なし
 
-weekday = "月"
+weekday = "金"
 // sw と入力して、 Switch Statement を選択
 switch (weekday) {
     case "月":
+    case "金":
         trash = "もえるゴミ"
         break;
 
