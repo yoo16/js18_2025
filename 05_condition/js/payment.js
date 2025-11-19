@@ -19,9 +19,10 @@ audioFanfare.volume = 0.1;
 // 固定請求額
 // ===========================
 const PAYMENT_AMOUNT = 1500;
+// Cash: 現金の所持金（しょじきん）
 let money = 0;
 
-// 選択された決済方法
+// 選択された決済方法: Payment Method
 let selectedMethod = "";
 
 // 表示用ラベル
@@ -67,7 +68,16 @@ function selectMethod(methodKey) {
     // 1. 現金(cash) の時に cashArea を表示
     // 2. QR決済(qr) の時に showQrCode() を実行し、qrArea を表示
     // 3. 他の決済方法の時は特に表示なし
-
+    // Siwtch文: 決済方法: key -> selectedMethod
+    switch (selectedMethod) {
+        case "cash":
+            // id = "cashArea" を表示: class="hidden" を削除
+            cashArea.classList.remove("hidden");
+            break;
+    
+        default:
+            break;
+    }
 }
 
 // ===========================
