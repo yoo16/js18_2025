@@ -74,12 +74,12 @@ function selectMethod(methodKey) {
             // id = "cashArea" を表示: class="hidden" を削除
             cashArea.classList.remove("hidden");
             break;
-
         case "qr":
             // id = "qrArea" を表示: class="hidden" を削除
             qrArea.classList.remove("hidden");
             break;
         default:
+            // 他の決済方法の時は特に表示なし
             break;
     }
 }
@@ -118,6 +118,13 @@ function handlePayment() {
     // 現金だけ残高チェック
     // selectedMethod=cash かつ money < PAYMENT_AMOUNT 
     // : 残高不足です。チャージしてください。
+    // かつ = And = &&
+    if (selectedMethod == "cash" && money < PAYMENT_AMOUNT) {
+        // 残高不足メッセージ表示
+        showStatus("残高不足です。チャージしてください。");
+        // 処理中断
+        return;
+    }
 
     showStatus("決済処理中です...");
     // TODO ビープ音再生
