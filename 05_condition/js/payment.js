@@ -138,8 +138,15 @@ function handlePayment() {
 
 function completePayment() {
     // TODO: 現金決済の場合、所持金から引く
-    // 1. meny -= PAYMENT_AMOUNT
+    // 1. money -= PAYMENT_AMOUNT
     // 2. updateWallet() を実行
+    // if statement
+    if (selectedMethod == "cash") {
+        // Cash からPayment amount を引く
+        money -= PAYMENT_AMOUNT;
+        // Cashをアップデート
+        updateWallet();
+    }
 
     // TODO :決済完了ファンファーレ再生
     // isAudioPlay=true の時: audioFanfare.play()
