@@ -30,7 +30,11 @@ var num = 0;
 // wh と入力して While Statement を選択
 // num が 10 以下だったら、Loop
 while (num <= 10) {
-    
+    // num が 偶数(even number) だったら表示
+    // 2 で割った余りが 0
+    if (num % 2 == 0) {
+        console.log(num);
+    }
     // num = 1, 2, 3, ..., 10
     num++
 }
