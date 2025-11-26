@@ -58,8 +58,8 @@ function calculateSaving() {
         return;
     }
 
-    let month = 0;
-    let currentSaving = 0;
+    let month = 0;          // ←経過月数を追加
+    let currentSaving = 0;  // ←現在の貯金額を追加
     let totalInterest = 0;  // ←累計利息を追加
 
     // TODO: While で 複利＋積立で目標まで計算
@@ -68,6 +68,12 @@ function calculateSaving() {
     // 3) 累計利息 = 累計利息 + 月利息
     // 4) 貯金額 = 貯金額 + 月利息 + 月の積立額
     // 5) 月数をカウント
+
+    // 現在の貯金（currentSaving)が
+    // 目標金額(savingTarget)に達するまで繰り返し
+    while (currentSaving < savingTarget) {
+        
+    }
 
     // 年数へ変換
     const years = Math.floor(month / 12);
