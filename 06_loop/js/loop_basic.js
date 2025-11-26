@@ -26,3 +26,11 @@ var num = 0;
 // 2) 10 までの偶数(even number)を表示
 // 3) 7 だったらループを終了
 // 4) num を １ 増やす
+
+// wh と入力して While Statement を選択
+// num が 10 以下だったら、Loop
+while (num <= 10) {
+    
+    // num = 1, 2, 3, ..., 10
+    num++
+}
