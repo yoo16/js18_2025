@@ -73,6 +73,9 @@ function calculateSaving() {
     // 目標金額(savingTarget)に達するまで繰り返し
     while (currentSaving < savingTarget) {
         
+
+        // 月数をカウント
+        month++
     }
 
     // 年数へ変換
