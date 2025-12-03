@@ -76,6 +76,7 @@ const rollDice = () => {
         diceContainer.innerHTML = `<span class="text-7xl">${number}</span>`
 
         // TODO: diceImages 配列から、number 番目のSVG画像を取り出して表示: innerHTML
+        diceContainer.innerHTML = diceImages[number]
 
         // diceContainer の data-number 属性を更新: dataset.number
         diceContainer.dataset.number = number;
