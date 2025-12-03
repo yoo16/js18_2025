@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Pop Dice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"M PLUS Rounded 1c"', 'sans-serif'] },
+                    animation: {
+                        'shake': 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+                    },
+                    keyframes: {
+                        shake: {
+                            '10%, 90%': { transform: 'translate3d(-1px, 0, 0) rotate(-1deg)' },
+                            '20%, 80%': { transform: 'translate3d(2px, 0, 0) rotate(2deg)' },
+                            '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0) rotate(-4deg)' },
+                            '40%, 60%': { transform: 'translate3d(4px, 0, 0) rotate(4deg)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-sky-600 min-h-screen flex flex-col items-center justify-center text-white">
+
+    <header class="text-center mb-10">
+        <h1 id="title" class="text-6xl font-extrabold drop-shadow-lg tracking-wider">タイトル</h1>
+    </header>
+
+    <main class="text-center">
+        <div id="dice-container" class="w-48 h-48"></div>
+    </main>
+
+    <div id="message" class="font-bold text-sky-300 my-2 text-xl tracking-wide"></div>
+
+    <div class="mt-2 flex flex-col items-center gap-6">
+        <button id="btn-roll"
+            class="bg-white text-sky-600 hover:bg-sky-50 font-black py-4 px-12 rounded-full shadow-[0_6px_0_rgb(199,210,254)] hover:shadow-[0_4px_0_rgb(199,210,254)] active:shadow-none transform hover:-translate-y-1 active:translate-y-1 transition-all text-2xl border-4 border-transparent">
+            🎲 ROLL IT!
+        </button>
+    </div>
+
+    <script src="js/dice.js"></script>
+</body>
+
+</html>

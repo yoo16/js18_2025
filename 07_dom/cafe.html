@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Blanc</title>
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white text-stone-600 antialiased selection:bg-stone-200">
+    <!-- ナビゲーション (上部固定) -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white backdrop-blur-md border-b border-white/0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- ロゴ -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-serif text-2xl tracking-widest text-stone-800">Café Blanc</span>
+                </div>
+
+                <!-- デスクトップメニュー -->
+                <div class="hidden md:flex space-x-12">
+                    <a href="#concept"
+                        class="text-sm tracking-widest hover:text-stone-900 transition-colors duration-300">CONCEPT</a>
+                    <a href="#menu"
+                        class="text-sm tracking-widest hover:text-stone-900 transition-colors duration-300">MENU</a>
+                    <a href="#gallery"
+                        class="text-sm tracking-widest hover:text-stone-900 transition-colors duration-300">GALLERY</a>
+                    <a href="#access" class="text-sm hover:text-stone-900 transition-colors duration-300">ACCESS</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-stone-600 hover:text-stone-900 focus:outline-none p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ヒーローセクション (パララックス 1) -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <img id="background-image"
+            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000" />
+        <h1 id="copy"
+            class="backdrop-blur p-4 text-4xl md:text-6xl lg:text-7xl text-black drop-shadow-md tracking-[0.2em] mb-6 leading-tight">
+        </h1>
+
+        <!-- スクロールダウンインジケーター -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-stone-500">
+            <i data-lucide="chevron-down" class="w-8 h-8 opacity-70"></i>
+        </div>
+    </header>
+
+    <!-- アクセス & フッター -->
+    <footer id="access" class="bg-stone-900 text-stone-300 py-20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+            <!-- 店舗情報 -->
+            <div class="space-y-8 fade-in-section">
+                <div>
+                    <h2 class="font-serif text-3xl text-white tracking-widest mb-2">Café Blanc</h2>
+                    <p class="text-stone-500 text-sm">カフェ・ブラン</p>
+                </div>
+
+                <div class="space-y-2 font-light">
+                    <div class="flex items-start">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-4 mt-0.5 text-stone-500"></i>
+                        <p>〒150-0001<br>東京都渋谷区神宮前 0-0-0<br>ホワイトヒルズ 1F</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="phone" class="w-5 h-5 mr-4 text-stone-500"></i>
+                        <p>03-1234-5678</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="clock" class="w-5 h-5 mr-4 text-stone-500"></i>
+                        <p>Open 08:00 - Close 20:00 (L.O. 19:30)</p>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-lucide="calendar" class="w-5 h-5 mr-4 text-stone-500"></i>
+                        <p>定休日：水曜日</p>
+                    </div>
+                </div>
+
+                <div class="flex space-x-6 pt-4">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="instagram"
+                            class="w-6 h-6"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="twitter"
+                            class="w-6 h-6"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook"
+                            class="w-6 h-6"></i></a>
+                </div>
+            </div>
+
+            <!-- 地図（プレースホルダー） -->
+            <div
+                class="w-full h-64 bg-stone-800 flex items-center justify-center fade-in-section grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                <div class="text-center">
+                    <i data-lucide="map" class="w-10 h-10 mx-auto mb-2 text-stone-600"></i>
+                    <p class="text-stone-500 tracking-widest text-sm">GOOGLE MAPS</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 border-t border-stone-800 pt-8 text-center">
+            <p class="text-xs text-stone-600 tracking-widest">&copy; 2023 Café Blanc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/cafe.js"></script>
+</body>
+
+</html>
