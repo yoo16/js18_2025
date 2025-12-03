@@ -87,6 +87,7 @@ const rollDice = () => {
     setTimeout(() => {
         // アニメーション終了 & ボタン有効化
         // TODO: diceContainer から animate-shake クラスを削除: classList.remove()
+        diceContainer.classList.remove('animate-shake')
 
         btnRoll.disabled = false;
         btnRoll.classList.remove('invisible');
