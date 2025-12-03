@@ -67,6 +67,8 @@ const rollDice = () => {
 
     // TODO: アニメーション開始
     // animate-shake クラスを diceContainer に追加: classList.add()
+    diceContainer.classList.add('animate-shake')
+    // <div class="animate-shake ...">
 
     const timer = setInterval(() => {
         number = randomNumber(1, 6);
