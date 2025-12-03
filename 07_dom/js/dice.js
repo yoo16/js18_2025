@@ -137,7 +137,7 @@ createDiceImages();
 diceContainer.innerHTML= '<span class="text-7xl">1</span>'
 
 // TODO: 1のサイコロ画像を表示: innerHTML: diceImages[1] を代入
-
+diceContainer.innerHTML = diceImages[1]
 
 // ボタンクリックイベント
 btnRoll.addEventListener('click', rollDice);
