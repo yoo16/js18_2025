@@ -22,6 +22,11 @@ const dotPositions = {
 };
 
 // TODO: タイトル設定: id=title を textContent で設定
+// 1. doc と入力して document 
+// 2. .get と入力して getElementById('title') 
+// 3. .te と入力して textContent
+
+document.getElementById('title').textContent = "Dice App"
 
 /**
  * ランダムな整数 (min 〜 max)
