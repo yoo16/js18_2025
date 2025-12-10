@@ -75,14 +75,15 @@ function animationText(text) {
  * 背景画像のスライドショー
  */
 function switchBackground() {
-    // 背景画像のインデックス更新
+    // 背景画像のインデックス更新: ３枚の画像のインデックス: 0,1,2 のどれか
     imageIndex = (imageIndex + 1) % images.length;
 
-    // TODO: Imageオブジェクト作成 
-    let image = {}
+    // TODO: img タグの作成: createElement()
+    let image = document.createElement('img')
 
     // TODO: Imageオブジェクトに配列 images の画像パス設定: image.src
     // images[imageIndex] を代入
+    image.src = images[imageIndex]
 
     // 画像がロードされたら実行
     image.onload = () => {
@@ -93,9 +94,11 @@ function switchBackground() {
             copyElement.classList.add("text-white");
 
             // TODO: backgroundImageの src 更新
-            // images[imageIndex] を代入
+            // image.src を代入
+            backgroundImage.src = image.src
 
             // TODO: backgroundImage のフェードイン: style.opacity = 1
+            backgroundImage.style.opacity = 1
         }, fadeInTime);
     };
 }
