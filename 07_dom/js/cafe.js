@@ -8,14 +8,14 @@ const images = [
 ];
 // 画像の指定インデックス
 let imageIndex = 0;
-// アニメーションテキストのディレイ時間
+// アニメーションテキストのディレイ時間: 1000 = 1sec
 const animationTextDelay = 200;
 // 背景画像のフェードイン時間
 const fadeInTime = 1000;
 // 背景画像の切り替え時間
 const backgroundSwitchTime = 3000;
 
-// キャッチコピーのElement
+// キャッチコピーのElement: id=copy のElement を取得
 const copyElement = document.getElementById('copy');
 // 背景画像のElement
 const backgroundImage = document.getElementById('background-image');
@@ -23,13 +23,17 @@ const backgroundImage = document.getElementById('background-image');
 /**
  * animationText()
  * アニメーションテキスト
+ * 1文字ずつ span タグを作成してテキスト表示する
  */
 function animationText(text) {
     // 現在、何文字目かのインデックス
     let index = 0;
     function displayNextChar() {
         // TODO: spanタグ作成 createElement()
-        let span = {}
+        // 1. doc と入力して document を補完
+        // 2. . と入力して cre を入力　して createElement() を補完
+        // 3. () の中に 'span' を入力
+        let span = document.createElement('span')
         // spanタグに文字をいれる
         // span.textContent = text
         // TODO: spanに、text の index番目の文字を設定
