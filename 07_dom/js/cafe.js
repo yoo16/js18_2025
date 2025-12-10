@@ -46,6 +46,9 @@ function animationText(text) {
         // <span class="fade-in">文字</span> となる
 
         // TODO: copyElement に spanタグを追加: appendChild()
+        // 1. copyElement と入力
+        // 2. . と入力して app を入力　して appendChild() を補完
+        // 3. () の中に span を入力
         copyElement.appendChild(span)
 
         // 文字インデックスを増やす
