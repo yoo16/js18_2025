@@ -34,8 +34,11 @@ function animationText(text) {
         // 2. . と入力して cre を入力　して createElement() を補完
         // 3. () の中に 'span' を入力
         let span = document.createElement('span')
-        // spanタグに文字をいれる
-        // span.textContent = text
+        // <span></span> を作成
+
+        // spanタグに文字をいれる: text[index]
+        span.textContent = text[index]
+
         // TODO: spanに、text の index番目の文字を設定
 
         // TODO: class=fade-in を設定: classList.add()
