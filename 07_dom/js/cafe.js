@@ -88,6 +88,7 @@ function switchBackground() {
     // 画像がロードされたら実行
     image.onload = () => {
         // TODO: backgroundImage のフェードアウト: style.opacity = 0
+        backgroundImage.style.opacity = 0
 
         // フェードインで画像表示
         setTimeout(() => {
