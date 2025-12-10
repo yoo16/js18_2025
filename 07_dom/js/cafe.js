@@ -37,13 +37,16 @@ function animationText(text) {
         // <span></span> を作成
 
         // spanタグに文字をいれる: text[index]
-        span.textContent = text[index]
-
         // TODO: spanに、text の index番目の文字を設定
+        span.textContent = text[index]
+        // <span>文字</span> となる
 
         // TODO: class=fade-in を設定: classList.add()
+        span.classList.add('fade-in')
+        // <span class="fade-in">文字</span> となる
 
         // TODO: copyElement に spanタグを追加: appendChild()
+        copyElement.appendChild(span)
 
         // 文字インデックスを増やす
         index++;
