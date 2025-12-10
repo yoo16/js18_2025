@@ -23,11 +23,11 @@ const backgroundImage = document.getElementById('background-image');
 /**
  * animationText()
  * アニメーションテキスト
- * 1文字ずつ span タグを作成してテキスト表示する
  */
 function animationText(text) {
     // 現在、何文字目かのインデックス
     let index = 0;
+    // 1文字ずつ span タグを作成してテキスト表示する
     function displayNextChar() {
         // TODO: spanタグ作成 createElement()
         // 1. doc と入力して document を補完
@@ -50,10 +50,11 @@ function animationText(text) {
 
         // 文字インデックスを増やす
         index++;
+        // 文字が最後まででなければ、次の文字を表示
         if (index < text.length) {
             // TODO: 現在の文字インデックスが、文字数より小さければ、アニメーションテキスト継続
             // setTimeout() を使って displayNextChar() を animationTextDelay 後に実行
-
+            displayNextChar()
         } else {
             // 初回背景画像表示
             switchBackground();
