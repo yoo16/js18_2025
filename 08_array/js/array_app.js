@@ -61,6 +61,7 @@ btnPush.addEventListener('click', () => {
     // ランダムな数字を取得
     const number = getRandomNumber();
     // TODO: push(): 末尾に追加
+    cards.push(number)
 
     // 画面を再描画
     render();
@@ -74,6 +75,7 @@ btnUnshift.addEventListener('click', () => {
     // ランダムな数字を取得
     const number = getRandomNumber();
     // TODO: unshift(): 先頭に追加
+    cards.unshift(number)
 
     // 画面を再描画
     render();
