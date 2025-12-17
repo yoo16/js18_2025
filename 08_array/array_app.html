@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+
+    <h1 class="text-4xl mb-2 ">Array</h1>
+
+    <div class="my-2 bg-gray-800 p-4 rounded-xl text-white text-xl w-full border">
+        const cards = <span id="codeOutput">[ ]</span>;
+    </div>
+
+    <div id="card-table"
+        class="w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 shadow-2xl min-h-[160px] flex flex-wrap justify-start items-center gap-4 mb-8">
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-2xl">
+
+        <button id="btnPush" class="group relative bg-blue-400 hover:bg-blue-400 text-white font-bold py-4 rounded-xl">
+            <span class="block text-2xl mb-1">⬇️ Push</span>
+            <span class="text-xs opacity-80">末尾に追加</span>
+        </button>
+
+        <button id="btnUnshift"
+            class="group relative bg-fuchsia-400 hover:bg-fuchsia-400 text-white font-bold py-4 rounded-xl">
+            <span class="block text-2xl mb-1">⬆️ Unshift</span>
+            <span class="text-xs opacity-80">先頭に追加</span>
+        </button>
+
+        <button id="btnPop" class="group relative bg-rose-500 hover:bg-rose-400 text-white font-bold py-4 rounded-xl">
+            <span class="block text-2xl mb-1">👋 Pop</span>
+            <span class="text-xs opacity-80">末尾を削除</span>
+        </button>
+
+        <button id="btnShift"
+            class="group relative bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 rounded-xl">
+            <span class="block text-2xl mb-1">🚪 Shift</span>
+            <span class="text-xs opacity-80">先頭を削除</span>
+        </button>
+
+    </div>
+
+    <script src="js/array_app.js"></script>
+</body>
+
+</html>
