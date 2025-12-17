@@ -20,7 +20,7 @@ function showItem() {
     if (!validate(index)) return;
 
     // TODO:index から値を取得して表示
-    inputValue.value = "";
+    inputValue.value = items[index];
 
     // エラーメッセージを空にする
     errorMsg.innerText = "";
