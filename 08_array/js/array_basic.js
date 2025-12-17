@@ -42,6 +42,7 @@ function updateItem() {
     if (!validate(index)) return;
 
     // TODO: index を指定して、配列 items の値を更新
+    items[index] = value
 
     // 配列を表示
     renderArray();
