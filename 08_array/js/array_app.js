@@ -57,6 +57,7 @@ function getEmoji(index) {
 }
 
 // --- イベントリスナーの設定 ---
+// Push ボタンがクリックされたら動きます
 btnPush.addEventListener('click', () => {
     // ランダムな数字を取得
     const number = getRandomNumber();
@@ -70,7 +71,7 @@ btnPush.addEventListener('click', () => {
         document.querySelector('.card:last-child').classList.add(...activeClass);
     }, addDelay)
 });
-
+// Unshift ボタンがクリックされたら動きます
 btnUnshift.addEventListener('click', () => {
     // ランダムな数字を取得
     const number = getRandomNumber();
@@ -84,7 +85,7 @@ btnUnshift.addEventListener('click', () => {
         document.querySelector('.card').classList.add(...activeClass);
     }, addDelay)
 });
-
+// Pop ボタンがクリックされたら動きます
 btnPop.addEventListener('click', () => {
     if (cards.length === 0) return alert('誰もいないよ！');
     // class=card の最後を選択
@@ -97,7 +98,7 @@ btnPop.addEventListener('click', () => {
         render();
     }, removeDelay);
 });
-
+// shift ボタンがクリックされたら動きます
 btnShift.addEventListener('click', () => {
     if (cards.length === 0) return alert('誰もいないよ！');
     // class=card の最初を選択
