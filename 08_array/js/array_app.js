@@ -91,7 +91,9 @@ btnPop.addEventListener('click', () => {
     document.querySelector('.card:last-child').classList.add(...removeClass);
     // 1秒後に削除
     setTimeout(() => {
-        // TODO: pop(): 末尾削除
+        // TODO: pop(): 末尾削除(last remove)
+        cards.pop()
+
         render();
     }, removeDelay);
 });
@@ -103,6 +105,8 @@ btnShift.addEventListener('click', () => {
     // 1秒後に削除
     setTimeout(() => {
         // TODO: shift(): 先頭削除
+        cards.shift()
+
         render();
     }, removeDelay);
 });
