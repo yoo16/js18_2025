@@ -18,6 +18,8 @@ let currentStation = {
 // TODO: currentStation の更新
 // name: 有楽町
 // furigana: ゆうらくちょう
+currentStation.name = "有楽町"
+currentStation.furigana = "ゆうらくちょう"
 
 // TODO: 駅名表示
 current.textContent = currentStation.name
