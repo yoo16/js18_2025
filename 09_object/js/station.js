@@ -48,7 +48,7 @@ current.textContent = currentStation.name
 furigana.textContent = currentStation.furigana
 
 // TODO:前の駅名表示: 配列を使って
-prev.innerHTML = ""
+prev.innerHTML = stations[0].name
 
 // TODO:次の駅名表示: 配列を使って
-next.innerHTML = ""
+next.innerHTML = stations[2].name
