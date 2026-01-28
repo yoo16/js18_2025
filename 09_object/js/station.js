@@ -11,13 +11,22 @@ let currentStation = {
     furigana: "とうきょう",
 }
 
+// あまり好ましくない書き方
+// let stationName = "東京"
+// let stationFurigana = "とうきょう"
+
 // TODO: currentStation の更新
 // name: 有楽町
 // furigana: ゆうらくちょう
 
 // TODO: 駅名表示
-current.textContent = ""
-furigana.textContent = ""
+current.textContent = currentStation.name
+furigana.textContent = currentStation.furigana
+
+// const product = {
+//     name: "ノートパソコン",
+//     price: 120000,
+// }
 
 // 連想配列の配列
 let stations = [
