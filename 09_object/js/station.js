@@ -30,7 +30,7 @@ furigana.textContent = currentStation.furigana
 //     price: 120000,
 // }
 
-// 連想配列の配列
+// ディクショナリー（辞書型）
 let stations = [
     { name: "東京", furigana: "とうきょう", },
     { name: "有楽町", furigana: "ゆうらくちょう", },
