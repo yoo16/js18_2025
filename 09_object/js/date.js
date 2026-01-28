@@ -9,11 +9,11 @@ function updateTime() {
     const timeElement = document.getElementById("time");
     const dateElement = document.getElementById("date");
 
-    // TODO: 現在の日時を取得
-    const now = {};
+    // TODO: 日付のインスタンスを作成
+    const now = new Date();
 
     // TODO: 日時の値を取得
-    const year = "";
+    const year = now.getFullYear();
     const month = "";
     const day = "";
 
