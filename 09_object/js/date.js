@@ -14,8 +14,9 @@ function updateTime() {
 
     // TODO: 日時の値を取得
     const year = now.getFullYear();
-    const month = "";
-    const day = "";
+    // 0から11の範囲なので+1する
+    const month = now.getMonth() + 1;
+    const day = now.getDate();
 
     // TODO: 時刻を取得し、padZero() でゼロパディング
     const hours = "";
