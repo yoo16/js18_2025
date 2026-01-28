@@ -19,9 +19,9 @@ function updateTime() {
     const day = now.getDate();
 
     // TODO: 時刻を取得し、padZero() でゼロパディング
-    const hours = "";
-    const minutes = "";
-    const seconds = "";
+    const hours = padZero(now.getHours());
+    const minutes = padZero(now.getMinutes());
+    const seconds = padZero(now.getSeconds());
 
 
     // 時刻のフォーマット HH:MM:SS
