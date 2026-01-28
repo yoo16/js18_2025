@@ -27,8 +27,9 @@ function updateTime() {
     // 時刻のフォーマット HH:MM:SS
     const formattedTime = `${hours}:${minutes}:${seconds}`;
 
-    // TODO:日付のフォーマット YYYY年MM月DD日
+    // TODO: 曜日
     const dayOfWeek = now.toLocaleString('ja-JP', { weekday: 'short' });
+    // 日付のフォーマット YYYY年MM月DD日
     const formattedDate = `${year}年 ${month}月 ${day}日 (${dayOfWeek})`;
 
     timeElement.textContent = formattedTime;
