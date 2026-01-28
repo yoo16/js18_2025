@@ -6,7 +6,10 @@ const prev = document.getElementById('prev-station');
 // TODO: オブジェクトの定義
 // name: 東京
 // furigana: とうきょう
-let currentStation = {}
+let currentStation = {
+    name: "東京",
+    furigana: "とうきょう",
+}
 
 // TODO: currentStation の更新
 // name: 有楽町
