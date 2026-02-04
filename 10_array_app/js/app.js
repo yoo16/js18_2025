@@ -103,29 +103,32 @@ function displayStations() {
     stationMap.innerHTML = ""; // 毎回クリア
 
     // TODO: 配列「stations」をループ
-    // stations.forEach((station, index) => {
-    //     const stationElement = document.createElement('div');
-    //     // IDを付けてハイライト対象とする
-    //     stationElement.id = `station-${station.id}`;
+    // 1. stations.forEach()
+    // 2. stations.forEach((station, index) => { ... });
 
-    //     stationElement.className = `
-    //         station text-sm w-full h-[40px] rounded-full 
-    //         bg-green-500 text-white flex items-center justify-center 
-    //         m-1 cursor-pointer shadow-md hover:scale-105 transition-transform duration-150
-    //     `;
-    //     // クリックしたときにハイライトが更新されるようにする
-    //     stationElement.addEventListener('click', () => onStationClick(station.id));
+    stations.forEach((station, index) => {
+        const stationElement = document.createElement('div');
+        // IDを付けてハイライト対象とする
+        stationElement.id = `station-${station.id}`;
 
-    //     // 駅名表示
-    //     stationElement.textContent = station.name;
+        stationElement.className = `
+            station text-sm w-full h-[40px] rounded-full 
+            bg-green-500 text-white flex items-center justify-center 
+            m-1 cursor-pointer shadow-md hover:scale-105 transition-transform duration-150
+        `;
+        // クリックしたときにハイライトが更新されるようにする
+        stationElement.addEventListener('click', () => onStationClick(station.id));
 
-    //     // 初回表示時にハイライトを適用
-    //     if (index === currentStationIndex) {
-    //         stationElement.classList.add('bg-green-700');
-    //     }
+        // 駅名表示
+        stationElement.textContent = station.name;
 
-    //     stationMap.appendChild(stationElement);
-    // });
+        // 初回表示時にハイライトを適用
+        if (index === currentStationIndex) {
+            stationElement.classList.add('bg-green-700');
+        }
+
+        stationMap.appendChild(stationElement);
+    });
 }
 
 // ページ読み込み時に初期化
