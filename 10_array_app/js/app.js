@@ -5,7 +5,7 @@ const currentFurigana = document.getElementById('current-furigana');
 const nextButton = document.getElementById('next-button');
 const prevButton = document.getElementById('prev-button');
 
-// インデックス（現在の駅）
+// インデックス（現在の駅）: id = 1 : 東京
 let currentStationIndex = getStationIndexById(1);
 // インデックス（次の駅）
 let nextStationIndex = getNextStationIndex();
@@ -19,10 +19,13 @@ let prevStationIndex = getPrevStationIndex();
 function updateStation() {
     // 現在の駅
     // TODO: 配列「stations」から、現在のインデックス「currentStationIndex」で、駅（連想配列）を取得
+    const station = stations[currentStationIndex]
 
     // TODO: 現在の駅名表示
+    currentName.textContent = station.name
 
     // TODO: 現在の駅名（ふりがな）表示
+    currentFurigana.textContent = station.furigana
 
     // TODO: ハイライトを一旦全て外す: class="station"
     // document.querySelectorAll('.station').forEach(stationElement => {
@@ -47,7 +50,7 @@ function updateStation() {
  */
 function getStationIndexById(id) {
     //  TODO: 駅のID から インデックス取得
-    // return stations.findIndex(station => station.id === id);
+    return stations.findIndex((station) => station.id === id);
 }
 
 /**
