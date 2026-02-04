@@ -38,10 +38,12 @@ function updateStation() {
     // 次の駅のインデックス
     nextStationIndex = getNextStationIndex();
     // TODO: インデックスから駅名表示: nextButton
+    nextButton.textContent = stations[nextStationIndex].name;
 
     // 前の駅のインデックス
     prevStationIndex = getPrevStationIndex();
     // TODO: インデックスから駅名表示: prevButton
+    prevButton.textContent = stations[prevStationIndex].name;
 }
 
 /**
@@ -59,7 +61,7 @@ function getStationIndexById(id) {
  */
 function getNextStationIndex() {
     // TODO: 現在のインデックス + 1 を、配列の要素数で割った余りを返す
-    // return (currentStationIndex + 1) % stations.length;
+    return (currentStationIndex + 1) % stations.length;
 }
 
 /**
@@ -68,7 +70,7 @@ function getNextStationIndex() {
  */
 function getPrevStationIndex() {
     // TODO: 現在のインデックス - 1 を、配列の要素数で割った余りを返す
-    // return (currentStationIndex - 1 + stations.length) % stations.length;
+    return (currentStationIndex - 1 + stations.length) % stations.length;
 }
 
 /**
