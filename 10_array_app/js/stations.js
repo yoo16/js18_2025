@@ -1,11 +1,10 @@
-
-// 駅名リストとふりがな
 const stations = [
     { id: 1, name: '東京', furigana: 'とうきょう' },
     { id: 2, name: '有楽町', furigana: 'ゆうらくちょう' },
     { id: 3, name: '新橋', furigana: 'しんばし' },
     { id: 4, name: '浜松町', furigana: 'はままつちょう' },
     { id: 5, name: '田町', furigana: 'たまち' },
+    { id: 30, name: '高輪ゲートウェイ', furigana: 'たかなわげーとうぇい' },
     { id: 6, name: '品川', furigana: 'しながわ' },
     { id: 7, name: '大崎', furigana: 'おおさき' },
     { id: 8, name: '五反田', furigana: 'ごたんだ' },
