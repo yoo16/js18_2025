@@ -107,6 +107,7 @@ function displayStations() {
     // 2. stations.forEach((station, index) => { ... });
 
     stations.forEach((station, index) => {
+        // div タグを作成
         const stationElement = document.createElement('div');
         // IDを付けてハイライト対象とする
         stationElement.id = `station-${station.id}`;
@@ -126,7 +127,7 @@ function displayStations() {
         if (index === currentStationIndex) {
             stationElement.classList.add('bg-green-700');
         }
-
+        // HTML に追加
         stationMap.appendChild(stationElement);
     });
 }
