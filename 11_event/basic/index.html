@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSイベントサンプル</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-2xl mx-auto space-y-8">
+        <h1 class="text-3xl font-bold text-center mb-8">イベントの基本</h1>
+
+        <section class="bg-white p-6 rounded-lg shadow border-l-4 border-blue-500">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="border-b p-2 text-sm font-semibold">イベント名</th>
+                            <th class="border-b p-2 text-sm font-semibold">発生するタイミング（トリガー）</th>
+                            <th class="border-b p-2 text-sm font-semibold">対象</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">click</td>
+                            <td class="border-b p-2">要素がクリックされた時</td>
+                            <td class="border-b p-2">ボタン、リンク</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">input</td>
+                            <td class="border-b p-2">値が入力・変更された瞬間</td>
+                            <td class="border-b p-2">テキスト入力、検索欄</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">mouseover</td>
+                            <td class="border-b p-2">マウスが要素の上に乗った時</td>
+                            <td class="border-b p-2">画像、カード、メニュー</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">mouseout</td>
+                            <td class="border-b p-2">マウスが要素から離れた時</td>
+                            <td class="border-b p-2">画像、カード、メニュー</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">change</td>
+                            <td class="border-b p-2">選択が確定した時（フォーカスが外れた時）</td>
+                            <td class="border-b p-2">セレクトボックス、チェックボックス</td>
+                        </tr>
+                        <tr>
+                            <td class="border-b p-2 font-mono text-blue-600">submit</td>
+                            <td class="border-b p-2">フォームが送信される時</td>
+                            <td class="border-b p-2">formタグ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4 border-b pb-2">1. Click (クリック)</h2>
+            <button id="btn-click" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+                ここを押して！
+            </button>
+            <p id="click-msg" class="mt-4 text-gray-600">ボタンはまだ押されていません。</p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4 border-b pb-2">2. Input (入力中)</h2>
+            <p id="input-msg" class="mb-2 text-gray-600">入力内容：<span class="font-mono text-green-600"></span></p>
+            <input type="text" id="input-text" placeholder="文字を入力してみて..."
+                class="border-2 border-gray-300 p-2 w-full rounded focus:border-green-500 outline-none">
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4 border-b pb-2">3. Mouse (マウス操作)</h2>
+            <div id="mouse-area"
+                class="w-full h-24 bg-gray-200 rounded flex items-center justify-center cursor-pointer transition-colors duration-300">
+                この枠にマウスを乗せてみて
+            </div>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4 border-b pb-2">4. Change (選択の確定)</h2>
+            <label class="block mb-2 text-sm font-medium text-gray-700">お好きな言語を選んでください：</label>
+            <select id="select-lang"
+                class="border-2 border-gray-300 p-2 w-full rounded focus:border-orange-500 outline-none">
+                <option value="">選択してください</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="PHP">PHP</option>
+            </select>
+            <p id="change-msg" class="mt-4 text-gray-600">選択結果：<span class="font-bold text-orange-600">未選択</span></p>
+        </section>
+
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold mb-4 border-b pb-2">5. Submit (送信)</h2>
+            <form id="sample-form" class="space-y-4">
+                <input type="text" id="form-name" placeholder="お名前" required class="border p-2 rounded w-full">
+                <button type="submit"
+                    class="bg-purple-500 text-white px-4 py-2 rounded w-full hover:bg-purple-600">送信(更新を阻止)</button>
+            </form>
+            <p id="form-msg" class="mt-4 text-purple-600 hidden font-bold">送信されました！</p>
+        </section>
+
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

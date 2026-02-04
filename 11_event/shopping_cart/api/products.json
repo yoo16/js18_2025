@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "ベーシック クルーネックTシャツ", "category": "Tops", "price": 2900, "image": "images/products/1.avif" },
+  { "id": 2, "name": "スリムフィット デニム", "category": "Bottoms", "price": 8500, "image": "images/products/2.avif" },
+  { "id": 3, "name": "マウンテン パーカー", "category": "Outer", "price": 12800, "image": "images/products/3.avif" },
+  { "id": 4, "name": "キャンバス トートバッグ", "category": "Accessories", "price": 4200, "image": "images/products/4.avif" },
+  { "id": 5, "name": "オックスフォード シャツ", "category": "Tops", "price": 5500, "image": "images/products/5.avif" },
+  { "id": 6, "name": "Vネック カーディガン", "category": "Knit", "price": 7800, "image": "images/products/6.avif" },
+  { "id": 7, "name": "クラシック スニーカー", "category": "Shoes", "price": 9500, "image": "images/products/7.avif" }
+]
