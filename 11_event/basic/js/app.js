@@ -29,13 +29,17 @@ inputText.addEventListener('input', (event) => {
 // マウスが要素に乗った時、離れた時に色を変える
 const mouseArea = document.getElementById('mouse-area');
 
-// TODO: mouseoverイベントの処理を実装: addEventListener('mouseover', function(event) {})
-mouseArea.textContent = 'mouseover';
-mouseArea.classList.replace('bg-gray-200', 'bg-yellow-300');
+// TODO: mouseover イベントの処理を実装: addEventListener('mouseover', function(event) {})
+mouseArea.addEventListener('mouseover', (event) => {
+    mouseArea.textContent = 'mouseover';
+    mouseArea.classList.replace('bg-gray-200', 'bg-yellow-300');
+})
 
-// TODO: mouseoutイベントの処理を実装: addEventListener('mouseout', function(event) {})
-mouseArea.textContent = 'mouseout';
-mouseArea.classList.replace('bg-yellow-300', 'bg-gray-200');
+// TODO: mouseout イベントの処理を実装: addEventListener('mouseout', function(event) {})
+mouseArea.addEventListener('mouseout', (event) => {
+    mouseArea.textContent = 'mouseout';
+    mouseArea.classList.replace('bg-yellow-300', 'bg-gray-200');
+})
 
 // 4. Changeイベント
 // セレクトボックスの選択が変更された時に実行
