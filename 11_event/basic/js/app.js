@@ -46,19 +46,19 @@ mouseArea.addEventListener('mouseout', (event) => {
 const selectLang = document.getElementById('select-lang');
 const changeMsg = document.querySelector('#change-msg span');
 
+// TODO: change イベントの処理を実装: addEventListener('change', function(event) {})
 selectLang.addEventListener('change', (event) => {
+    // 選択された値を取得
+    const selectedValue = event.target.value;
+    // const selectedValue = selectLang.value;
 
+    if (selectedValue) {
+        changeMsg.textContent = selectedValue + '(change)';
+    } else {
+        changeMsg.textContent = '未選択';
+    }
 })
 
-// TODO: change イベントの処理を実装: addEventListener('change', function(event) {})
-// 選択された値を取得
-const selectedValue = "";
-
-if (selectedValue) {
-    changeMsg.textContent = selectedValue + '(change)';
-} else {
-    changeMsg.textContent = '未選択';
-}
 
 // 5. Submitイベント
 // フォーム送信時にページがリロードされるのを防ぎ、カスタム処理を行う
