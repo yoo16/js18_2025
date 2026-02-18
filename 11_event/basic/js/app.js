@@ -90,5 +90,9 @@ sampleForm.addEventListener('submit', (event) => {
 
     // 入力をクリア
     sampleForm.reset();
+
+    // TODO: サーバにデータ送信
+    // Fetch APIを使ってサーバにデータを送信する例
+    // await fetch('https://example.com/api/submit')
 })
 
