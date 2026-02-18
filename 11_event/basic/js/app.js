@@ -59,6 +59,7 @@ const changeMsg = document.querySelector('#change-msg span');
 //     }
 // })
 
+// イベントハンドラー: Event Handler
 const langChangeHandler = (event) => {
     // 選択された値を取得
     const selectedValue = event.target.value;
@@ -69,6 +70,7 @@ const langChangeHandler = (event) => {
     }
 }
 
+// イベントリスナー: Event Listener
 selectLang.addEventListener('change', langChangeHandler)
 
 // 5. Submitイベント
