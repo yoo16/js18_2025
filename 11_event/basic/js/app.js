@@ -19,8 +19,10 @@ const inputText = document.getElementById('input-text');
 const inputMsg = document.querySelector('#input-msg span');
 
 // TODO: inputイベントの処理を実装: addEventListener('input', function(event) {
-inputText.addEventListener('input', () => {
-
+inputText.addEventListener('input', (event) => {
+    // event = イベントオブジェクト（イベントに関する情報を持つオブジェクト）
+    // event.target = イベントが発生したElement（ここではinputText）
+    inputMsg.textContent = event.target.value
 })
 
 // 3. Mouseover/Mouseoutイベント
