@@ -5,11 +5,13 @@ const clickMsg = document.getElementById('click-msg');
 
 // TODO: clickイベントの処理を実装: addEventListener('click', function(event) {})
 // btnClick.addEventListener('click', () => {})
+// ブラウザのキャッシュ
+// Win: Ctrl + F5, Ctrl + Shift + R
+// Mac: Command + Shift + R
 btnClick.addEventListener('click', () => {
-    clickMsg.textContent = 'ボタンクリック！(click)';
-    clickMsg.classList.add('text-blue-600', 'font-bold');
+    clickMsg.textContent = 'ぼたんくりっく！';
+    clickMsg.classList.add('text-red-600', 'font-bold');
 })
-
 
 // 2. Inputイベント
 // 入力フォームに文字を打つたびにリアルタイムで反映する
