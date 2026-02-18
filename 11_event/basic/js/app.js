@@ -59,9 +59,7 @@ const changeMsg = document.querySelector('#change-msg span');
 //     }
 // })
 
-selectLang.addEventListener('change', langeChangeHandler)
-
-const langeChangeHandler = (event) => {
+const langChangeHandler = (event) => {
     // 選択された値を取得
     const selectedValue = event.target.value;
     if (selectedValue) {
@@ -70,6 +68,8 @@ const langeChangeHandler = (event) => {
         changeMsg.textContent = '未選択';
     }
 }
+
+selectLang.addEventListener('change', langChangeHandler)
 
 // 5. Submitイベント
 // フォーム送信時にページがリロードされるのを防ぎ、カスタム処理を行う
