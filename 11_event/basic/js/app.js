@@ -46,6 +46,10 @@ mouseArea.addEventListener('mouseout', (event) => {
 const selectLang = document.getElementById('select-lang');
 const changeMsg = document.querySelector('#change-msg span');
 
+selectLang.addEventListener('change', (event) => {
+
+})
+
 // TODO: change イベントの処理を実装: addEventListener('change', function(event) {})
 // 選択された値を取得
 const selectedValue = "";
