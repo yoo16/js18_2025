@@ -7,49 +7,51 @@ const count = document.getElementById('cart-count');
 const total = document.getElementById('cart-total');
 const cartDrawer = document.getElementById('cart-drawer');
 
-// TODO: 初期化処理
-// document.addEventListener('DOMContentLoaded', async () => {
-//     renderProducts();     // 商品表示
-//     updateCartUI();       // カートUI更新
-// });
+// 初期化処理
+document.addEventListener('DOMContentLoaded', async () => {
+    // await fetchProducts(); // API で取得する場合に使用
+    renderProducts();     // 商品表示
+    updateCartUI();       // カートUI更新
+});
 
 // 商品一覧の描画
 function renderProducts() {
-    // TODO: map() を使って商品一覧を表示
-    // grid.innerHTML = products.map(p => `
-    //     <div class="group bg-white p-4 rounded-xl shadow-sm">
-    //         <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
-    //             <img src="${p.image}" class="h-full w-full object-cover group-hover:opacity-75">
-    //         </div>
-    //         <div class="mt-4 flex justify-between">
-    //             <div>
-    //                 <h3 class="text-sm font-medium text-gray-700">${p.name}</h3>
-    //                 <p class="text-sm font-bold mt-1">¥${p.price.toLocaleString()}</p>
-    //             </div>
-    //             <button class="cart-btn bg-gray-100 p-2 rounded-full hover:bg-gray-200" data-id="${p.id}">＋</button>
-    //         </div>
-    //     </div>
-    // `).join('');
+    grid.innerHTML = products.map(p => `
+        <div class="group bg-white p-4 rounded-xl shadow-sm">
+            <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                <img src="${p.image}" class="h-full w-full object-cover group-hover:opacity-75">
+            </div>
+            <div class="mt-4 flex justify-between">
+                <div>
+                    <h3 class="text-sm font-medium text-gray-700">${p.name}</h3>
+                    <p class="text-sm font-bold mt-1">¥${p.price.toLocaleString()}</p>
+                </div>
+                <button class="cart-btn bg-gray-100 p-2 rounded-full hover:bg-gray-200" data-id="${p.id}">＋</button>
+            </div>
+        </div>
+    `).join('');
 
-    // TODO: カートボタンの取得
-    const cartButtons = [];
+    const cartButtons = document.querySelectorAll('.cart-btn');
 
+    // カートボタンのクリックイベント
     cartButtons.forEach(btn => {
-        // TODO: カートボタンのクリックイベント
-        // TODO: HTMLの data-id 属性から値を取り出す
-        // TODO: addToCart(id)を呼び出す
+        btn.addEventListener('click', (event) => {
+            // HTMLの data-id 属性から値を取り出す
+            const id = Number(event.target.dataset.id);
+            addToCart(id);
+        });
     });
 }
 
 // カートに追加
 function addToCart(id) {
     console.log(id)
-    // TODO: find() を使って idで商品を特定
-    const product = [];
+    // idで商品を特定
+    const product = products.find(p => p.id === id);
     if (!product) return;
 
-    // TODO: find() を使って すでにカートにあるか確認
-    const item = [];
+    // すでにカートにあるか確認
+    const item = cart.find(c => c.id === id);
 
     if (item) {
         // すでにカートに存在する場合は数量を増やす
@@ -64,14 +66,15 @@ function addToCart(id) {
 
 // カートから削除
 function removeFromCart(id) {
-    // TODO: filter() を使って IDで商品を特定して削除
-    cart = [];
+    // IDで商品を特定して削除
+    cart = cart.filter(item => item.id !== id);
     // カート保存
     saveCart();
 }
 
 // UI更新
 function updateCartUI() {
+    console.log(cart)
     // カート内商品数表示
     count.innerText = totalCount();
 
@@ -94,40 +97,41 @@ function updateCartUI() {
     `).join('');
 }
 
-// カート取得
 function fetchCart() {
-    // TODO: localStorageからカートを取得: localStorage.getItem('shop_cart')
-    const item = [];
-    if (item) {
-        // JSON.parse()で文字列をオブジェクトに変換
-        return JSON.parse(item);
-    } else {
-        return [];
-    }
+    return JSON.parse(localStorage.getItem('shop_cart')) || [];
 }
 
 // カート内商品数計算
 function totalCount() {
-    // TODO: reduce() を使ってカート内商品数を計算
-    // return cart.reduce((sum, item) => sum + item.quantity, 0);
+    return cart.reduce((sum, item) => sum + item.quantity, 0);
 }
 
 // 合計金額計算
 function calculateTotal() {
-    // TODO: reduce() を使って合計金額を計算
-    // return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 }
 
 // カート保存
 function saveCart() {
-    // TODO: JSON.stringify()でオブジェクトを文字列に変換
-    const json = JSON.stringify(cart);
-    // TODO:LocalStorageに保存: localStorage.setItem('shop_cart', json);
+    // LocalStorageに保存
+    localStorage.setItem('shop_cart', JSON.stringify(cart));
     updateCartUI();
 }
 
 // カート表示切替
 function toggleCart() {
-    // TODO: classListを使って表示/非表示を切り替え
-    // cartDrawer.classList.toggle('translate-x-full');
+    // classListを使って表示/非表示を切り替え
+    cartDrawer.classList.toggle('translate-x-full');
+}
+
+// API でJSONデータの読み込み
+async function fetchProducts() {
+    try {
+        const response = await fetch('api/products.json');
+        if (!response.ok) throw new Error('Network response was not ok');
+        products = await response.json();
+    } catch (error) {
+        console.error('Fetch error:', error);
+        grid.innerHTML = '<p class="text-center py-10">商品データの読み込みに失敗しました。</p>';
+    }
 }
