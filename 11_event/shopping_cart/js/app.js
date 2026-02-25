@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 // 商品一覧の描画
 function renderProducts() {
+    // products 配列をループしてHTMLを生成し、grid要素に挿入
     grid.innerHTML = products.map(p => `
         <div class="group bg-white p-4 rounded-xl shadow-sm">
             <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
@@ -30,11 +31,12 @@ function renderProducts() {
             </div>
         </div>
     `).join('');
-
+    // class=cart-btn の要素をすべて取得
     const cartButtons = document.querySelectorAll('.cart-btn');
 
     // カートボタンのクリックイベント
     cartButtons.forEach(btn => {
+        // クリックイベントリスナーを追加
         btn.addEventListener('click', (event) => {
             // HTMLの data-id 属性から値を取り出す
             const id = Number(event.target.dataset.id);
