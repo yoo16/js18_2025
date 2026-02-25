@@ -1,13 +1,13 @@
-// グローバル変数
+// グローバル変数: ショッピングカートの情報を読み込み
 let cart = fetchCart();
-
+// DOM要素の取得
 const grid = document.getElementById('product-grid');
 const cartList = document.getElementById('cart-items');
 const count = document.getElementById('cart-count');
 const total = document.getElementById('cart-total');
 const cartDrawer = document.getElementById('cart-drawer');
 
-// 初期化処理
+// 初期化処理: HTMLの読み込みが完了したら商品を表示し、カートUIを更新
 document.addEventListener('DOMContentLoaded', async () => {
     // await fetchProducts(); // API で取得する場合に使用
     renderProducts();     // 商品表示
